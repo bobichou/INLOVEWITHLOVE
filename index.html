@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INLOVEWITHLOVE</title>
+    <link rel="shortcut icon" href="asset/img/faviconroller.png" />
+    <link rel ="stylesheet" href="style.css" />
+    <script src="https://www.paypal.com/sdk/js?client-id=AUp1qIH5ZEgikDreL3vzTNmHOplPKi_jAcz4vGheS-uHzpx_ZQmBb4nxgltcdpEg6Yh9zju0Y58GyGR_&currency=EUR"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>
+            La huit étoiles euh des rollers
+        </h1>
+    </header>
+    
+
+        <div class = "writing">   
+            <h3> <span class= "element"> </span> </h3>
+        <script>
+            var typed = new Typed('.element', {
+      strings: ['1', 
+    '...............................',
+    'I met you thanks to Camille on Jerusalem Beach',
+    'on Monday the 8th of august 2022.',
+    'I came to the beach rollerblading after',
+    'a hard day of work in construction. ',
+    'You saw my rollerblades in the sand',
+    'and whispered ',
+    'That you also had yours at home ',
+    'How rare was this?',
+    'I just bought them one week ago !!!',
+    'How free we would feel soon ?', 
+    'I immediately felt that you were living',
+    'your life on another layer of feelings.',
+    'You were wearing a long white cleopatran lace dress.',
+    'I couldn’t even look you in your brown eye',
+    'so I stayed weirdly silent.',
+    'The next morning, I was painting about you',
+    'On Wednesday, I started a WhatsApp group',
+    'for a Shabbat Roller Night Session', 
+    'with you and six other friends,',
+    'quietly knowing nobody but us two actually rollerblade !!',
+    'Shabbat Roller is the best because not a',
+    'single car is in the streets of Tel Aviv.',
+    'You rollerblade on the big avenues',
+    'with a crazy playlist in your headphones.',
+    'The city is yours.', 
+    'On friday, when the sun was about to set',
+    'we met next to Gordon beach...',
+    'We whirled around on rollerblades for at least 2 hours.',
+    'on this smooth concrete square',
+    'That was not a date.',
+    'This was a dance.',
+    'A courtship ritual.',
+    'Une roulade nuptiale',
+    'Both of us were turning, dancing, going backwards,',
+    'chatting, falling, argueing and smiling!',
+    'You showed me a bit of your art,',
+    'tell me a part of your story', 
+    'and delicately implied after a little 180 jump',
+    'that you were not wearing', 
+    'any bra under your black top.',
+    'Which I had noticed !!!',
+    'I was hooked.',
+    'I wrote this book',
+    'To come back on our relationship which suddenly stopped',
+    'after 9 months day to day of deep love.',
+    'To turn our memories and love into an eternal story.',
+    'To thank you for showing me your idea of love.',
+    'For having put all this energy in us',
+    'To put words on what went wrong.',
+    'To make wanders between',
+    'successfull free relationship and power of sliding',
+    'which got us united.',
+    'I hope this book will live up to our union.', 
+    'La huit étoiles euh des rollers',
+    'Boris Love.']
+    ,typeSpeed: 20, loop : true, backspeed : 10,
+    });
+        </script>
+        </div>
+
+
+    <main>
+
+        <div class="grid">
+            <h2>The e-book (55 pages, French, 5 €, trough email from Paypal ) </h2>
+            <div class="grid-container">
+                <img src="./asset/img/CouvertureLivre.png" alt="couvbouquin">
+
+                <div id = "paypal-button-container">
+                    <script>
+                        paypal.Buttons({
+                            createOrder: function(data,actions){
+                                return actions.order.create({
+                                    purchase_units: [{
+                                        amount: {
+                                            value: '5'
+                                        }
+                                    }]
+                                })
+                            },
+                            onApprove: function(data, actions){
+                                return actions.order.capture().then(function(details){
+                                    alert("Transaction OK : "+details.payer.name.given_name);
+                                })
+    
+                            },
+                            onError: function(err){
+                                console.error('Payment error :', err);
+                                alert("Paiement échoué!");
+    
+                            }
+                        }).render("#paypal-button-container");
+                    </script>
+                </div>     
+            </div>
+
+            
+    </main>
+
+
+</body>
+</html>
